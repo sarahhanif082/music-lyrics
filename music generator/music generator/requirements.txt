@@ -1,5 +1,6 @@
-Flask
-torch
-transformers
-pyttsx3
-audiocraft
+Flask==2.0.1
+torch==1.9.0
+transformers==4.11.3
+pyttsx3==2.90
+audiocraft==latest_version
+
