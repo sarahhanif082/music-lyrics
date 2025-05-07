@@ -11,15 +11,13 @@ WORKDIR /app
 # Copy the current directory contents into the container
 COPY . /app/
 
-# Install system dependencies for Python 3.10 and pip
-RUN apt-get update && apt-get install -y python3.10 python3.10-distutils
-
-# Ensure pip is installed and upgraded
-RUN python3.10 -m ensurepip --upgrade
+# Ensure pip is installed and upgraded (already included in the python:3.10-slim image, but to be sure)
+RUN python3 -m ensurepip --upgrade
 
 # Install the required Python packages
-RUN python3.10 -m pip install --no-cache-dir -r requirements.txt
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
 # Specify the command to run your app
-CMD ["python3.10", "app.py"]
+CMD ["python3", "app.py"]
+
 
