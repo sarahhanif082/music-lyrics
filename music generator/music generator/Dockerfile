@@ -19,5 +19,3 @@ RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
 # Specify the command to run your app
 CMD ["python3", "app.py"]
-
-
