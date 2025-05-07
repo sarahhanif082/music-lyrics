@@ -11,8 +11,8 @@ WORKDIR /app
 # Copy the current directory contents into the container
 COPY . /app/
 
-# Ensure pip is installed and upgraded (already included in the python:3.10-slim image, but to be sure)
-RUN python3 -m ensurepip --upgrade
+# Ensure pip is upgraded (this is usually unnecessary with the python:3.10-slim image)
+RUN python3 -m pip install --upgrade pip
 
 # Install the required Python packages
 RUN python3 -m pip install --no-cache-dir -r requirements.txt
