@@ -3,6 +3,9 @@ from generate_lyrics import generate_lyrics
 from generate_music import generate_music
 import os
 import pyttsx3
+import sys
+print(f"Python version: {sys.version}")
+
 
 app = Flask(__name__)
 OUTPUT_DIR = "static/generated"
