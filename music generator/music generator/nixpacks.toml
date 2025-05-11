@@ -1,9 +1,0 @@
-[phases.setup]
-nixpkgs = ["python310", "gcc", "libffi", "openssl", "ffmpeg"]
-
-[phases.install]
-cmds = ["python3.10 -m ensurepip", "python3.10 -m pip install --upgrade pip", "python3.10 -m pip install -r requirements.txt"]
-
-[start]
-cmd = "python3.10 app.py"
-
